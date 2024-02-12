@@ -1,24 +1,442 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Rfb-SC-60Q">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="c1l-Ik-XSv">
+            <objects>
+                <navigationController id="Rfb-SC-60Q" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hZw-zs-B2H">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="NPA-pC-aUd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xPJ-d9-n5A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-279" y="10"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Lab5" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="Qbj-MP-bpQ">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0od-iH-Dtg">
+                                <rect key="frame" x="115" y="348" width="163" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Level 1">
+                                    <backgroundConfiguration key="background" image="BG2"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="bxa-vU-opX" kind="show" id="gW2-pH-cDY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ByX-CX-MVd">
+                                <rect key="frame" x="115" y="423" width="163" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Level 2"/>
+                                <connections>
+                                    <segue destination="O7P-bI-i3F" kind="show" id="nbK-bc-IGg"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="One Piece" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JPY-uB-xBD">
+                                <rect key="frame" x="16" y="77" width="361" height="97"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="65"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j1S-2g-EmB">
+                                <rect key="frame" x="302" y="783" width="50" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <segue destination="zJP-18-6eb" kind="show" id="rVg-5d-6MY"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.65536281533454488" green="0.77622755412797384" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="OYv-lR-E1h"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="667.93893129770993" y="9.8591549295774659"/>
+        </scene>
+        <!--One piece Level 2-->
+        <scene sceneID="hPE-Ur-xla">
+            <objects>
+                <viewController id="O7P-bI-i3F" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7NJ-2Q-sSg">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BG4" translatesAutoresizingMaskIntoConstraints="NO" id="sQp-6G-hJA">
+                                <rect key="frame" x="0.0" y="0.0" width="400" height="852"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yiq-7o-ugM">
+                                <rect key="frame" x="118" y="397" width="156" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.2383924748574795" blue="0.92259168400324276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Wano Arc"/>
+                                <connections>
+                                    <segue destination="PFB-Gy-kZt" kind="show" id="M6W-Mx-7cv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="TYf-UL-lnW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="One piece Level 2" id="Vbh-gC-djF">
+                        <barButtonItem key="backBarButtonItem" title="Level 2" id="CSH-9e-wyw"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MSA-cN-ehu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2046.564885496183" y="8.4507042253521139"/>
+        </scene>
+        <!--Wano Arc Part 1-->
+        <scene sceneID="JJH-y6-bDG">
+            <objects>
+                <viewController id="PFB-Gy-kZt" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mh0-OS-gu6">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BG5" translatesAutoresizingMaskIntoConstraints="NO" id="5ez-2h-TER">
+                                <rect key="frame" x="-14" y="-8" width="407" height="860"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kDQ-Sb-9C9">
+                                <rect key="frame" x="292" y="784" width="97" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0048605963940000002" green="1" blue="0.14084117430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrowshape.right.fill" catalog="system" title="Part 2"/>
+                                <connections>
+                                    <segue destination="mgZ-Td-JFX" kind="show" id="sv8-w2-ET7"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Hhl-xl-RvQ">
+                                <rect key="frame" x="16" y="103" width="361" height="680"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">The Wano Arc in One Piece is an epic saga that unfolds in the isolated, samurai-themed country of Wano. This sprawling storyline is marked by intricate political intrigue, intense battles, and deep exploration of characters' pasts and motivations. As one of the longest and most ambitious arcs in the series, Wano captivates readers and viewers alike with its rich world-building and emotionally resonant storytelling.
+
+The arc begins with the Straw Hat Pirates, along with allies both old and new, venturing into Wano in pursuit of their friend and comrade, Roronoa Zoro. Upon arrival, they discover a nation under the oppressive rule of the tyrannical Shogun Kurozumi Orochi and his ally, the fearsome pirate Emperor Kaido. Wano's citizens suffer under their oppressive regime, with poverty, famine, and injustice rampant throughout the land.
+
+As the Straw Hat Pirates delve deeper into Wano's political landscape, they form alliances with various factions and rebels seeking to overthrow Orochi and Kaido's rule. Along the way, they encounter powerful warriors known as the Nine Red Scabbards, who have sworn to avenge the downfall of their fallen lord, Kozuki Oden, and restore Wano to its former glory.
+
+The arc unfolds in a series of dramatic confrontations, as the Straw Hat Pirates and their allies clash with Orochi's forces and Kaido's fearsome crew, the Beast Pirates. These battles are not only physical but also ideological, as characters grapple with questions of honor, loyalty, and the true meaning of justice. Meanwhile, long-held secrets and hidden alliances come to light, revealing the true extent of Orochi and Kaido's schemes.
+
+</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="IQD-ik-aq1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Wano Arc Part 1" id="hhe-AL-rI8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RoG-XO-2FH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2974.8091603053435" y="9.8591549295774659"/>
+        </scene>
+        <!--Wano Arc Part 2-->
+        <scene sceneID="Kw4-Y3-JP1">
+            <objects>
+                <viewController id="mgZ-Td-JFX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FMV-vi-d3g">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BG6" translatesAutoresizingMaskIntoConstraints="NO" id="GGv-9g-9W3">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="28E-Oy-eBO">
+                                <rect key="frame" x="16" y="103" width="361" height="715"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">At the heart of the Wano Arc are the personal journeys of its characters, particularly the Straw Hat Pirates and the residents of Wano. Each character confronts their past traumas and struggles, finding strength and resolve in the face of overwhelming adversity. Through their bonds of friendship and shared determination, they inspire hope and ignite the flames of rebellion, leading to a climactic showdown that will determine the fate of Wano and its people.
+
+As the arc reaches its crescendo, alliances are tested, sacrifices are made, and heroes rise to challenge the forces of tyranny. In a final, explosive confrontation, the Straw Hat Pirates, alongside their allies, confront Orochi, Kaido, and their armies in a battle for the soul of Wano. The outcome of this conflict will not only shape the future of the country but also reverberate throughout the entire world of One Piece.
+
+The Wano Arc stands as a testament to the enduring legacy of One Piece, showcasing the series' unparalleled ability to weave together complex storytelling, dynamic characters, and thrilling action into a cohesive and emotionally resonant narrative. With its richly detailed setting, compelling themes, and epic scale, the Wano Arc cements its place as one of the greatest arcs in the storied history of One Piece.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6xZ-IA-f4Q"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Wano Arc Part 2" id="S40-t8-vir"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7fe-W5-Sn3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3875.5725190839694" y="7.746478873239437"/>
+        </scene>
+        <!--One Piece-->
+        <scene sceneID="Gor-yE-Trr">
+            <objects>
+                <viewController id="zJP-18-6eb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gxq-x7-SvV">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BG7" translatesAutoresizingMaskIntoConstraints="NO" id="79r-mv-BB3">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="l2v-cW-AzI">
+                                <rect key="frame" x="16" y="139" width="361" height="679"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <mutableString key="text">Level 1 Age : 8-13  , Level 2 Age - 13-18+                                                         One Piece (stylized in all caps) is a Japanese manga series written and illustrated by Eiichiro Oda. It has been serialized in Shueisha's shōnen manga magazine Weekly Shōnen Jump since July 1997, with its individual chapters compiled in 107 tankōbon volumes as of November 2023. The story follows the adventures of Monkey D. Luffy and his crew, the Straw Hat Pirates, where he explores the Grand Line in search of the mythical treasure known as the "One Piece" in order to become the next King of the Pirates.         The world of One Piece is populated by humans and other races such as dwarves (more akin to faeries in size), giants, merfolk, fish-men, long-limbed tribes, long-necked people known as the Snakeneck Tribe, and animal people (known as "Minks"). The world is governed by an intercontinental organization known as the World Government, consisting of dozens of member countries. The Navy is the sea military branch of the World Government that protects the known seas from pirates and other criminals. There is also Cipher Pol which is a group of agencies within the World Government that are their secret police. While pirates are major opponents against the Government, the ones who really challenge their rule are the Revolutionary Army who seeks to overthrow them. The central tension of the series pits the World Government and their forces against pirates. The series regularly emphasizes moral ambiguity over the label "pirate", which includes cruel villains, but also any individuals that do not submit to the World Government's authoritarian—and often morally ambiguous—rule. The One Piece world also has supernormal characteristics like Devil Fruits,[Jp 1] which are mysterious fruits that grant whoever eats them transformative powers. Another supernatural power is Haki,[Jp 2] which grants its users enhanced willpower, observation, and fighting abilities, and it is one of the only effective methods of inflicting bodily harm on certain Devil Fruit users.</mutableString>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zbE-nQ-KxT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="One Piece" id="mfX-0L-Dz8">
+                        <barButtonItem key="backBarButtonItem" title="Info" id="bzB-RU-3fg"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2cK-vY-4JZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2046.564885496183" y="986.61971830985919"/>
+        </scene>
+        <!--One Piece Level 1-->
+        <scene sceneID="pw2-kN-iuZ">
+            <objects>
+                <viewController id="bxa-vU-opX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kpf-JM-hyj">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Roronoa_Zoro" translatesAutoresizingMaskIntoConstraints="NO" id="QX9-kE-tdk">
+                                <rect key="frame" x="-8" y="0.0" width="401" height="852"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="meg-xe-2XO">
+                                <rect key="frame" x="116" y="318" width="160" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.30133033792164754" blue="0.0026333159601680256" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Arlong Park Arc"/>
+                                <connections>
+                                    <segue destination="xgf-XP-Jqb" kind="show" id="LM2-ZD-4k6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SEN-fm-9RT">
+                                <rect key="frame" x="116" y="450" width="160" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Arabasta Arc"/>
+                                <connections>
+                                    <segue destination="wj2-K0-d0T" kind="show" id="aTc-pu-FgL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Gp9-uM-Gsh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="One Piece Level 1" id="rwd-mO-t9U">
+                        <barButtonItem key="backBarButtonItem" title="Level 1" id="PYz-uJ-DWn"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DJS-dP-VDt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2064.8854961832062" y="-1170.4225352112676"/>
+        </scene>
+        <!--Arabasta Arc-->
+        <scene sceneID="Yl1-m1-mt5">
+            <objects>
+                <viewController id="wj2-K0-d0T" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="seM-oF-VsO">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BG3" translatesAutoresizingMaskIntoConstraints="NO" id="fuE-Q7-JtS">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="svD-NM-8Yi">
+                                <rect key="frame" x="16" y="103" width="361" height="715"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">The Arabasta Arc is a pivotal storyline in One Piece, where the Straw Hat Pirates find themselves embroiled in a complex political conflict in the desert kingdom of Arabasta. Led by the determined Princess Vivi, the crew faces off against the clandestine organization Baroque Works, led by the enigmatic Sir Crocodile, who seeks to overthrow the kingdom.
+
+As they journey through Arabasta, the Straw Hat Pirates encounter a diverse cast of characters and confront powerful adversaries, including deadly agents of Baroque Works and the formidable bounty hunter Smoker. Each encounter brings them closer to unraveling the dark secrets of the kingdom and stopping Sir Crocodile's nefarious plot.
+
+The climax of the arc unfolds in an epic showdown in the capital city of Alubarna, where the Straw Hat Pirates engage in intense battles against Baroque Works. Through courage, determination, and the bonds of friendship, they ultimately emerge victorious, thwarting Sir Crocodile's plans and saving Arabasta from destruction.
+
+The Arabasta Arc showcases the series' trademark blend of intricate storytelling, dynamic characters, and thrilling action, solidifying its place as one of the most iconic arcs in One Piece. It highlights themes of loyalty, sacrifice, and the pursuit of justice, resonating with audiences and cementing the series' status as a timeless classic in the world of manga and anime.
+
+
+
+
+
+</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="au9-0G-aGA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Arabasta Arc" id="A5y-3j-1oh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SbK-hA-Mvc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2974.8091603053435" y="-992.25352112676057"/>
+        </scene>
+        <!--Arlong park part 1-->
+        <scene sceneID="E2Z-af-SHs">
+            <objects>
+                <viewController id="xgf-XP-Jqb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gxK-r0-WVH">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BG2" translatesAutoresizingMaskIntoConstraints="NO" id="ZwU-bd-8Av">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ap5-ap-i2t">
+                                <rect key="frame" x="16" y="112" width="361" height="643"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">**One Piece: Arlong Park Arc Summary**
+
+The Arlong Park Arc in One Piece is a pivotal moment in the series where the Straw Hat Pirates confront Arlong, a powerful fish-man pirate who has been terrorizing the inhabitants of Cocoyasi Village and the surrounding area. This arc showcases themes of friendship, determination, and the struggle against oppression.
+
+The arc begins with the Straw Hat Pirates arriving at Cocoyasi Village, where they meet Nami, a skilled navigator who has been working with Arlong in order to buy back her village from him. Nami initially appears to betray the crew, but it is revealed that she has been forced to work for Arlong in order to save her village and her adoptive sister, Nojiko.
+
+As the arc progresses, it becomes clear that Arlong is a ruthless tyrant who extorts money from the villagers and rules with an iron fist. He has created a system of oppression that keeps the villagers in poverty and fear. Despite Nami's attempts to deceive them, the Straw Hat Pirates decide to help her and the villagers by taking on Arlong and his crew.
+
+The climactic battle takes place at Arlong Park, where the Straw Hat Pirates face off against Arlong and his fish-man crew. Each member of the crew has their own moment to shine as they fight against Arlong's powerful minions. Luffy, the captain of the crew, faces off against Arlong himself in a fierce battle of strength and determination.
+
+Ultimately, the Straw Hat Pirates emerge victorious, defeating Arlong and freeing Cocoyasi Village from his control. </string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XKB-lK-ln2">
+                                <rect key="frame" x="280" y="763" width="97" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0048605963940000002" green="1" blue="0.14084117430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrowshape.right.fill" catalog="system" title="Part 2"/>
+                                <connections>
+                                    <segue destination="MO1-Gu-psJ" kind="show" id="c31-O2-Cvc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3tn-GP-vAW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Arlong park part 1" id="6As-uF-5aS"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XiW-hZ-ifY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2974.8091603053435" y="-1768.3098591549297"/>
+        </scene>
+        <!--Arlong park Part 2-->
+        <scene sceneID="wgt-JU-QIR">
+            <objects>
+                <viewController id="MO1-Gu-psJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UEE-MU-LH7">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BG1" translatesAutoresizingMaskIntoConstraints="NO" id="Du0-ou-gIA">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Dd7-CJ-ye0">
+                                <rect key="frame" x="16" y="103" width="361" height="666"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Nami is finally able to obtain the money she needs to buy back her village, and she tearfully burns down the Arlong Pirates' flag, symbolizing the end of their reign of terror.
+
+The Arlong Park Arc is a turning point in the series, as it not only showcases the strength and unity of the Straw Hat Pirates but also delves into the backstory of one of their most enigmatic members. It highlights the themes of freedom, justice, and the power of friendship that are central to One Piece's overarching narrative.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kh2-AH-k3E"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Arlong park Part 2" id="zZf-p6-McZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BCP-2K-3Eb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3875.5725190839694" y="-1261.267605633803"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="BG1" width="183" height="275"/>
+        <image name="BG2" width="257" height="148"/>
+        <image name="BG3" width="1400" height="700"/>
+        <image name="BG4" width="275" height="183"/>
+        <image name="BG5" width="267" height="189"/>
+        <image name="BG6" width="311" height="162"/>
+        <image name="BG7" width="300" height="168"/>
+        <image name="Image" width="341.33334350585938" height="341.33334350585938"/>
+        <image name="Roronoa_Zoro" width="251" height="398"/>
+        <image name="arrowshape.right.fill" catalog="system" width="128" height="104"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
